@@ -1,0 +1,14 @@
+version: '3'
+services:
+    ipv6_test:
+        image: docker_ipv6_test:latest
+        deploy:
+            replicas: 1
+            restart_policy: 
+                condition: on-failure
+        ports:
+            - '5678:5678/tcp'
+        environment:
+            TZ: "Europe/Oslo"
+            RUNAS_UID0: "false"
+
