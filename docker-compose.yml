@@ -8,7 +8,4 @@ services:
                 condition: on-failure
         ports:
             - '5678:5678/tcp'
-        environment:
-            TZ: "Europe/Oslo"
-            RUNAS_UID0: "false"
-
+            
