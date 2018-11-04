@@ -14,4 +14,5 @@ RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 5678
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-w", "4", "-b", "[::]:5678", "--certfile=ssl-cert-snakeoil.pem", "--keyfile=ssl-cert-snakeoil.key", "myapp:app"]
+# CMD ["gunicorn", "-w", "4", "-b", "[::]:5678", "--certfile=ssl-cert-snakeoil.pem", "--keyfile=ssl-cert-snakeoil.key", "myapp:app"]
+CMD ["gunicorn", "-w", "4", "-b", "[::]:5678", "myapp:app"]
